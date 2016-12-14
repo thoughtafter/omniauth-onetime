@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'An omniauth strategy using secure onetime passwords.'
   spec.homepage      = 'https://github.com/thoughtafter/omniauth-onetime'
-  spec.licence       = 'LGPL-3.0'
+  spec.license       = 'LGPL-3.0'
 
   spec.files         = `git ls-files -z`
                        .split("\x0")
