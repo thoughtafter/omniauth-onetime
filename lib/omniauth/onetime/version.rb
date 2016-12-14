@@ -1,5 +1,5 @@
 #
-# omniauth-onetime - An omniauth strategy for generating secure onetime passwords.
+# omniauth-onetime - An omniauth strategy using secure onetime passwords.
 # Copyright (C) 2016 thoughtafter@gmail.com
 #
 # This file is part of omniauth-onetime.
@@ -19,6 +19,6 @@
 #
 module Omniauth
   module Onetime
-    VERSION = "0.1.0"
+    VERSION = '1.0.0'.freeze
   end
 end

@@ -1,5 +1,5 @@
 #
-# omniauth-onetime - An omniauth strategy for generating secure onetime passwords.
+# omniauth-onetime - An omniauth strategy using secure onetime passwords.
 # Copyright (C) 2016 thoughtafter@gmail.com
 #
 # This file is part of omniauth-onetime.
@@ -17,10 +17,8 @@
 # You should have received a copy of the GNU Lesser General Public License
 # along with omniauth-onetime.  If not, see <http://www.gnu.org/licenses/>.
 #
-require "omniauth/onetime/version"
+require 'omniauth'
+require 'bcrypt'
 
-module Omniauth
-  module Onetime
-    # Your code goes here...
-  end
-end
+require 'omniauth/onetime/version'
+require 'omniauth/strategies/onetime'
