@@ -65,7 +65,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU Lesser General Public License for more details.
 
 You should have received a copy of the GNU Lesser General Public License
-along with omniauth-onetime.  If not, see <[http://www.gnu.org/licenses/]>.
+along with omniauth-onetime.  If not, see <http://www.gnu.org/licenses/>.
 
 ## Details
 
@@ -96,7 +96,7 @@ these traditional systems is password reuse which puts accounts at risk
 whenever any system containing a user's password becomes compromised and
 subject to a brute force attack.
 
-## Benefits:
+### Benefits:
 
 * No passwords to create - Users are generally very bad at creating passwords
 unless they are highly disciplined. The requirement to remember the
@@ -113,7 +113,7 @@ other systems, whether they use this gem or not.
   2. enter the password that has been emailed to you or click a link in the
      email.
 
-## Limitations:
+### Limitations:
 
 * A compromised email account will compromise the user account. However, this
 is also true of any traditional system that allows for email reset or recovery
@@ -130,7 +130,7 @@ traditional systems.
 the email service used by the system or that used by the user will disrupt the
 user's ability to sign in.
 
-## Brute-force attack
+### Brute-force attacks:
 
 Let's assume a malicious agent wants to brute-force a user's password on a
 system using this gem. Using the default settings of an 8 letter password:
@@ -149,8 +149,8 @@ security having already occurred.
 
 On my development system the speed of bcrypt at cost 12 is roughly
 4 hashes per second per core. A 2015 attempt to crack bcrypt passwords with a
-cost of 12 using a GPU was able to achieve 156 hashes per second per GPU.
-[What I learned from cracking 4000 Ashley Madison passwords](http://www.pxdojo.net/2015/08/what-i-learned-from-cracking-4000.html)
-An energy efficient hardware approach only managed 41 hashes per second at
-bcrypt cost 12.
-[Energy-efficient bcrypt cracking](http://www.openwall.com/presentations/Passwords14-Energy-Efficient-Cracking/)
+cost of 12 using a GPU was able to achieve
+[156 hashes per second per GPU](http://www.pxdojo.net/2015/08/what-i-learned-from-cracking-4000.html "What I learned from cracking 4000 Ashley Madison passwords").
+An energy efficient hardware approach only managed
+[41 hashes per second](http://www.openwall.com/presentations/Passwords14-Energy-Efficient-Cracking/ "Energy-efficient bcrypt cracking")
+at bcrypt cost 12.
