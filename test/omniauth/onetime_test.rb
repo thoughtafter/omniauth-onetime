@@ -12,9 +12,10 @@ module OmniAuth
 
     def test_default_adversary
       assert_equal 1, OmniAuth::Strategies::Onetime.adversary_adjust
-      assert_equal 20000, OmniAuth::Strategies::Onetime.adversary_speed
-      assert_equal 34804, OmniAuth::Strategies::Onetime.adversary_ratio.to_i
-      assert OmniAuth::Strategies::Onetime.adversary_chance < 0.003
+      assert_equal 38400, OmniAuth::Strategies::Onetime.adversary_speed
+      assert_equal 18127, OmniAuth::Strategies::Onetime.adversary_ratio.to_i
+      assert_equal 0.006,
+        OmniAuth::Strategies::Onetime.adversary_chance.to_f.round(3)
     end
 
   end

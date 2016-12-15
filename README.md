@@ -151,6 +151,6 @@ On my development system the speed of bcrypt at cost 12 is roughly
 4 hashes per second per core. A 2015 attempt to crack bcrypt passwords with a
 cost of 12 using a GPU was able to achieve
 [156 hashes per second per GPU](http://www.pxdojo.net/2015/08/what-i-learned-from-cracking-4000.html "What I learned from cracking 4000 Ashley Madison passwords").
-An energy efficient hardware approach only managed
-[41 hashes per second](http://www.openwall.com/presentations/Passwords14-Energy-Efficient-Cracking/ "Energy-efficient bcrypt cracking")
+A Zynq 7045 FPGA device was able to achieve
+[226 hashes per second](http://www.openwall.com/presentations/Passwords14-Energy-Efficient-Cracking/slide-50.html "Energy-efficient bcrypt cracking, slide 50")
 at bcrypt cost 12.

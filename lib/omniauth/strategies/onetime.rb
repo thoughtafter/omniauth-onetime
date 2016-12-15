@@ -36,9 +36,9 @@ module OmniAuth
       # cost = bcrypt cost
       # speed = hashes per second per device at cost
       # devices = number of devices
-      AdversarySingleGPU = { cost: 12, speed: 200, devices: 1 }
-      AdversaryMultiGPU = { cost: 12, speed: 200, devices: 100 }
-      option :adversary, AdversaryMultiGPU
+      AdversarySingleDevice = { cost: 12, speed: 300, devices: 1 }
+      AdversaryMultiDevice = { cost: 12, speed: 300, devices: 128 }
+      option :adversary, AdversaryMultiDevice
 
       # 1 = 100 percent chance of the adversary cracking within the time
       # 100 = 1% chance, 1000 = 0.1% chance, 10_000 = 0.01%
