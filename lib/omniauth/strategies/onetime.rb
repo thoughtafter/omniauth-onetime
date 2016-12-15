@@ -24,11 +24,27 @@ module OmniAuth
       include OmniAuth::Strategy
 
       option :password_length, 8
-      option :password_time, 5.minutes
+      option :password_time, 300
       option :password_cost, 12
-      option :password_cache, Rails.cache
+      option :password_cache, defined?(Rails) ? Rails.cache : nil
       option :email_options, subject: 'Sign In Details'
-      option :minimum_security, 100
+
+      # these options are a means of modeling a theoretical adversary and
+      # ensuring some minimum level of security against that adversary
+      # the default is roughly a cluster of 100 GPU's, this is not inexpensive
+      # keep this in mind: https://xkcd.com/538/
+      # cost = bcrypt cost
+      # speed = hashes per second per device at cost
+      # devices = number of devices
+      AdversarySingleGPU = { cost: 12, speed: 200, devices: 1 }
+      AdversaryMultiGPU = { cost: 12, speed: 200, devices: 100 }
+      option :adversary, AdversaryMultiGPU
+
+      # 1 = 100 percent chance of the adversary cracking within the time
+      # 100 = 1% chance, 1000 = 0.1% chance, 10_000 = 0.01%
+      # or, 10_000 means there is 1 in 10,000 chance of brute-forcing a password
+      # in the time allotted
+      option :minimum_security, 10_000
 
       # hashes per second needed for 100% complete brute force
       # higher is more secure
@@ -37,16 +53,34 @@ module OmniAuth
           default_options[:password_time]
       end
 
-      # factor difficulty by password_cost to calculate metric for security
-      # higher is more secure
-      def self.security
-        difficulty / (2**(32 - default_options[:password_cost]))
+      # factor to adjust bcrypt costs
+      def self.adversary_adjust
+        2**(default_options[:adversary][:cost] -
+            default_options[:password_cost])
+      end
+
+      # hashes per second (total) at password_cost
+      def self.adversary_speed
+        default_options[:adversary][:speed] *
+          default_options[:adversary][:devices] * adversary_adjust
+      end
+
+      # ratio of hashes per second needed to brute-force to the theoretical
+      # adversary, <= 1 means the adversary can crack within the time alloted
+      # higher is more secure, chance of cracking = 1 in adversary_ratio
+      def self.adversary_ratio
+        Rational(difficulty, adversary_speed)
+      end
+
+      # percentage chance of the adversary cracking the password
+      def self.adversary_chance
+        100 / adversary_ratio
       end
 
       class_eval do
-        if (s = security) < (m = default_options[:minimum_security])
+        if (s = adversary_ratio) < (m = default_options[:minimum_security])
           raise ArgumentError, 'Omniauth-Onetime options do not reach minimum' \
-          " security requirements (#{s}<#{m}), please increase" \
+          " security requirements (#{s.to_i}<#{m}), please increase" \
           ' password_length, increase password_cost, or decrease password_time.'
         end
       end
