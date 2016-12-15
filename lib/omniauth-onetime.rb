@@ -20,5 +20,5 @@
 require 'omniauth'
 require 'bcrypt'
 
-require 'omniauth/onetime/version'
+require 'omniauth/omniauth-onetime/version'
 require 'omniauth/strategies/onetime'

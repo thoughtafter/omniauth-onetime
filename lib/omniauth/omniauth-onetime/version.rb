@@ -17,7 +17,7 @@
 # You should have received a copy of the GNU Lesser General Public License
 # along with omniauth-onetime.  If not, see <http://www.gnu.org/licenses/>.
 #
-module Omniauth
+module OmniAuth
   module Onetime
     VERSION = '1.0.0'.freeze
   end
