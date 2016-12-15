@@ -1050,13 +1050,13 @@ Style/SpecialGlobalVars:
 Style/StringLiterals:
   Description: 'Checks if uses of quotes match the configured preference.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#consistent-string-literals'
-  Enabled: false
+  Enabled: true
 
 Style/StringLiteralsInInterpolation:
   Description: >-
                  Checks if uses of quotes inside expressions in interpolated
                  strings match the configured preference.
-  Enabled: false
+  Enabled: true
 
 Style/StructInheritance:
   Description: 'Checks for inheritance from Struct.new.'
