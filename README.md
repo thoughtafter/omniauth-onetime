@@ -47,7 +47,69 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Enable omniauth-onetime using a Rails initializer at
+`config/initializers/omniauth.rb`:
+
+```ruby
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :onetime
+end
+```
+
+`config/routes.rb` file something like this:
+
+```ruby
+get '/auth/:provider/callback', to: 'sessions#create'
+```
+
+`app/controllers/sessions_controller.rb` file something like this:
+
+```ruby
+class SessionsController < ApplicationController
+  def create
+    @user = User.omniauth(auth_hash)
+    session[:user_id] = user.id
+    redirect_to request.env['omniauth.origin'] || root_path,
+      notice: "Signed in!"
+  end
+
+  def destroy
+    session[:user_id] = nil
+    redirect_to root_url, notice: "Signed out!"
+  end
+
+  protected
+
+  def auth_hash
+    request.env['omniauth.auth']
+  end
+end
+```
+
+`app/models/user.rb` file something like this:
+
+```ruby
+class User < ActiveRecord::Base
+  def self.omniauth(auth)
+    User.find_or_create_by(provider: auth['provider'], email: auth['email'])
+  end
+end
+```
+
+### Configuration
+
+These settings can be passed as a hash in the initializer.
+
+* password_length - length of random passwords (default: 8)
+* password_time - time in which a generating password is valid (default: 300)
+* password_cost - bcrypt cost/rounds (default: 12), be sure you understand the
+implications of changing this
+* email_options -a hash to be sent to ActionMailer::Base.mail (default:
+  { subject: 'Sign In Details' })
+* password_cache - a cache to store the passwords (default: Rails.cache for
+  Rails apps, none otherwise), expected to function like
+  [ActiveSupport::Cache::Store](http://api.rubyonrails.org/classes/ActiveSupport/Cache/Store.html),
+  make sure this cache is appropriate for your deployment
 
 ## Details
 
