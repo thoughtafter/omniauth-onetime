@@ -13,7 +13,7 @@ which may have included MD5 hashed passwords. In the wake of
 this and numerous other password breaches every web development team needs to
 ask:
 
-*Is it worth storing long term user generated passwords?*
+**Is it worth storing long term user generated passwords?**
 
 I suggest that it very rarely is.
 
@@ -126,9 +126,14 @@ other systems, whether they use this gem or not.
 
 ### Limitations:
 
-* A compromised email account will compromise the user account. However, this
-is also true of any traditional system that allows for email reset or recovery
-of passwords.
+* A compromised email account will compromise the user account. **However, this
+is also true of any traditional password system that allows for email reset or
+recovery of passwords.** The only way to circumvent this attack vector is to
+handle password resets in a way that verifies a person's identity manually and
+likely in person and with identification. Since most websites are probably not
+willing to take that step (though financial institutions should be at the very
+least considering it) then then emailed one-time passwords is just as secure as
+any website employing an automated email password reset system.
 * Users must divulge an email account under their control to sign in. This does
 not seem like a huge hurdle. If people are concerned with their privacy they
 would likely have to create an anonymous/pseudonymous email for use with these
