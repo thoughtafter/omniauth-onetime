@@ -110,15 +110,18 @@ subject to a brute force attack.
 ### Benefits:
 
 * No passwords to create - Users are generally very bad at creating passwords
-unless they are highly disciplined. The requirement to remember the
-password is directly at odds with the strength of the password.
+unless they are somewhat knowledgeable and  highly disciplined. The requirement
+to remember the password is directly at odds with the strength of the password.
+See also: [xkcd: Password Strength](https://xkcd.com/936/)
 * No passwords to remember - Passwords can be random and arbitrarily
 strong by increasing password length.
 * Passwords are short lived - Brute-force attacks are thwarted even with
 shorter passwords such as 8 random letters.
 * Passwords are not reused - A system using this gem cannot divulge useful
 password secrets if compromised. It is also immune from secrets divulged from
-other systems, whether they use this gem or not.
+other systems, whether they use this gem or not. It also does not require user
+trust that the website will not use passwords submitted by users for nefarious
+ends. See also: [xkcd: Password Reuse](https://xkcd.com/792/)
 * Easy for users - To Sign In:
   1. enter your email
   2. enter the password that has been emailed to you or click a link in the
@@ -171,3 +174,7 @@ cost of 12 using a GPU was able to achieve
 A Zynq 7045 FPGA device was able to achieve
 [226 hashes per second](http://www.openwall.com/presentations/Passwords14-Energy-Efficient-Cracking/slide-50.html "Energy-efficient bcrypt cracking, slide 50")
 at bcrypt cost 12.
+
+It's probably wise to keep this in mind:
+
+[![xlcd: Security](http://imgs.xkcd.com/comics/security.png)](https://xkcd.com/538/)
