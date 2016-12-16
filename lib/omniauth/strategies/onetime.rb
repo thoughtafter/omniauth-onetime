@@ -181,6 +181,7 @@ module OmniAuth
       def request_verification(email, plaintext)
         log :debug, 'STEP 3: verify password'
         if verify_password(email, plaintext)
+          options[:password_cache].delete(email) # expire password
           redirect callback_path
         else
           redirect request_path
