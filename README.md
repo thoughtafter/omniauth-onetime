@@ -91,7 +91,7 @@ end
 ```ruby
 class User < ActiveRecord::Base
   def self.omniauth(auth)
-    User.find_or_create_by(provider: auth['provider'], email: auth['email'])
+    User.find_or_create_by!(provider: auth['provider'], email: auth['email'])
   end
 end
 ```
@@ -100,16 +100,18 @@ end
 
 These settings can be passed as a hash in the initializer.
 
-* password_length - length of random passwords (default: 8)
-* password_time - time in which a generating password is valid (default: 300)
+* password_length - length of generated random passwords (default: 8)
+* password_time - time in seconds that a generated password is valid
+  (default: 300)
 * password_cost - bcrypt cost/rounds (default: 12), be sure you understand the
-implications of changing this
-* email_options -a hash to be sent to ActionMailer::Base.mail (default:
+  implications of changing this
+* email_options - a hash to be sent to ActionMailer::Base.mail (default:
   { subject: 'Sign In Details' })
 * password_cache - a cache to store the passwords (default: Rails.cache for
   Rails apps, none otherwise), expected to function like
   [ActiveSupport::Cache::Store](http://api.rubyonrails.org/classes/ActiveSupport/Cache/Store.html),
   make sure this cache is appropriate for your deployment
+  * must implement: write, read, delete, exist?
 
 ## Details
 
