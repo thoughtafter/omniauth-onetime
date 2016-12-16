@@ -4,14 +4,14 @@
 [![Test Coverage](https://codeclimate.com/github/thoughtafter/omniauth-onetime/badges/coverage.svg)](https://codeclimate.com/github/thoughtafter/omniauth-onetime/coverage)
 [![Issue Count](https://codeclimate.com/github/thoughtafter/omniauth-onetime/badges/issue_count.svg)](https://codeclimate.com/github/thoughtafter/omniauth-onetime)
 
-An omniauth strategy using secure onetime passwords.
+An [OmniAuth](https://github.com/omniauth/omniauth) strategy using secure
+onetime passwords.
 
 I released this code on Dec 14, 2016 after having used it in production for some
 time. Coincidentally, this is the same day that
 [Yahoo disclosed a breach of 1 billion accounts](https://yahoo.tumblr.com/post/154479236569/important-security-information-for-yahoo-users)
-which may have included MD5 hashed passwords. In the wake of
-this and numerous other password breaches every web development team needs to
-ask:
+which may have included MD5 hashed passwords. In the wake of this and numerous
+other password breaches every web development team needs to ask:
 
 **Is it worth storing long term user generated passwords?**
 
@@ -132,15 +132,16 @@ recovery of passwords.** The only way to circumvent this attack vector is to
 handle password resets in a way that verifies a person's identity manually and
 likely in person and with identification. Since most websites are probably not
 willing to take that step (though financial institutions should be at the very
-least considering it) then then emailed one-time passwords is just as secure as
+least considering it) then emailed one-time passwords are just as secure as
 any website employing an automated email password reset system.
 * Users must divulge an email account under their control to sign in. This does
 not seem like a huge hurdle. If people are concerned with their privacy they
 would likely have to create an anonymous/pseudonymous email for use with these
-systems.
+systems. Many websites require divulging an email even with a traditional
+password system.
 * Password emails can potentially create a log of usage. The existence of the
-email cannot prove a user signed in, especially since such emails can be
-triggered by anyone. However, this is still a notable difference from
+email cannot prove a user signed in or was trying to sign in since such emails
+can be triggered by anyone. However, this is still a notable difference from
 traditional systems.
 * Relies on external email systems to deliver passwords. Any downtime in either
 the email service used by the system or that used by the user will disrupt the
