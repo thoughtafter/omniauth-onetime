@@ -26,7 +26,7 @@ module OmniAuth
       option :password_length, 8
       option :password_time, 300
       option :password_cost, 12
-      option :password_cache, defined?(Rails) ? Rails.cache : nil
+      option :password_cache, nil
       option :email_options, subject: 'Sign In Details'
 
       # these options are a means of modeling a theoretical adversary and
@@ -45,6 +45,18 @@ module OmniAuth
       # or, 10_000 means there is 1 in 10,000 chance of brute-forcing a password
       # in the time allotted
       option :minimum_security, 10_000
+
+      def initialize(app, *args, &block)
+        super
+
+        if options[:password_cache].nil? && defined?(Rails)
+          options[:password_cache] = Rails.cache
+        end
+
+        if options[:password_cache].nil?
+          raise 'omniauth-onetime must be configured with a password cache.'
+        end
+      end
 
       # hashes per second needed for 100% complete brute force
       # higher is more secure
