@@ -6,6 +6,17 @@
 
 An omniauth strategy using secure onetime passwords.
 
+I released this code on Dec 14, 2016 after having used it in production for some
+time. Coincidentally, this is the same day that
+[Yahoo disclosed a breach of 1 billion accounts](https://yahoo.tumblr.com/post/154479236569/important-security-information-for-yahoo-users)
+which may have included MD5 hashed passwords. In the wake of
+this and numerous other password breaches every web development team needs to
+ask:
+
+*Is it worth storing long term user generated passwords?*
+
+I suggest that it very rarely is.
+
 ## Vision
 
 Strong passwords are difficult to remember. Rememberable passwords are usually
