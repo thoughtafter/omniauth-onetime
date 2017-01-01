@@ -138,9 +138,10 @@ transmission of quickly expiring one-time passwords.
 
 This approach may sound counter-intuitive, especially with a default password
 length of 8 characters. However, the real key to the security is that the
-passwords are sufficiently random and the window of opportunity is very short.
+passwords are sufficiently random and the window of opportunity to crack them
+is very short.
 A traditional username / password system fails because the passwords are not
-sufficiently random as truly random passwords are difficult to remember and
+sufficiently random, as truly random passwords are difficult to remember, and
 because the password lifetime is often very long. An issue which compounds
 these traditional systems is password reuse which puts accounts at risk
 whenever any system containing a user's password becomes compromised and
