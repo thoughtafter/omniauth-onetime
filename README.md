@@ -117,10 +117,14 @@ These settings can be passed as a hash in the initializer.
 
 Reading List:
 
+* 2012-07-25: [Is it time for password-less login?](http://notes.xoxco.com/post/27999787765/is-it-time-for-password-less-login)
+* 2012-07-29: [More on password-less login](http://notes.xoxco.com/post/28288684632/more-on-password-less-login)
 * 2014-04-12: [Passwords are Obsolete](https://medium.com/@ninjudd/passwords-are-obsolete-9ed56d483eb)
 * 2014-10-15: [Passwordless authentication: Secure, simple, and fast to deploy](https://hacks.mozilla.org/2014/10/passwordless-authentication-secure-simple-and-fast-to-deploy/)
 * 2015-06-30: [Why passwords suck](https://medium.engineering/why-passwords-suck-d1d1f38c1bb4)
+* 2016-05-12: [Password-less hassle-free authentication in Rails](https://masa331.github.io/2016/05/21/passwordless-authentication-in-rails.html)
 * 2016-08-12: [Securing access to genetic and personal information without a password](https://biogeniq.ca/en/articles/securing-access-to-genetic-and-personal-information-without-a-password/)
+* 2016-10-20: [Password-Less Authentication in Rails](https://www.sitepoint.com/password-less-authentication-in-rails/)
 * [Passwordless](https://passwordless.net/)
 
 The nomenclature has been settling on calling this approach "passwordless".
@@ -213,6 +217,25 @@ at bcrypt cost 12.
 It's probably wise to keep this in mind:
 
 [![xlcd: Security](http://imgs.xkcd.com/comics/security.png)](https://xkcd.com/538/)
+
+### Comparisons to similar solutions
+
+* [nopassword](https://github.com/alsmola/nopassword) -
+  I don't prefer this implementation: it's an engine, it's [very opinionated
+  about database structure](https://github.com/alsmola/nopassword/tree/master/db/migrate),
+  it always stores geographical location. I like OmniAuth because it allows
+  authentication mechanisms to be changed without requiring many, if any,
+  application changes. Storing geographic information may be something that
+  people want but I don't want to couple that with my solution.
+* [omniauth-passwordless](https://github.com/ultima51x/omniauth-passwordless) -
+  This does not appear maintained or developed and is not comparable - it simply
+  asks for an email address and passes that straight through - much like the
+  [OmniAuth Developer strategy](https://github.com/omniauth/omniauth/blob/master/lib/omniauth/strategies/developer.rb).
+  To quote from that code, "It has zero security and should *never* be used in a
+  production setting."
+* [omniauth-email](https://github.com/zshannon/omniauth-email) -
+  This does not appear maintained or developed. To quote the README, "this code
+  does not work, don't use it."
 
 ## Development
 
