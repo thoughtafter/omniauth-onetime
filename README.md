@@ -15,7 +15,7 @@ other password breaches every web development team needs to ask:
 
 **Is it worth storing long term user generated passwords?**
 
-I suggest that it very rarely is.
+I suggest that it very rarely is, unless you are an email provider or a financial institution.
 
 ## Vision
 
@@ -121,6 +121,7 @@ Reading List:
 * 2012-07-29: [More on password-less login](http://notes.xoxco.com/post/28288684632/more-on-password-less-login)
 * 2014-04-12: [Passwords are Obsolete](https://medium.com/@ninjudd/passwords-are-obsolete-9ed56d483eb)
 * 2014-10-15: [Passwordless authentication: Secure, simple, and fast to deploy](https://hacks.mozilla.org/2014/10/passwordless-authentication-secure-simple-and-fast-to-deploy/)
+* 2015-06-29: [Signing in to Medium by email](https://blog.medium.com/signing-in-to-medium-by-email-aacc21134fcd)
 * 2015-06-30: [Why passwords suck](https://medium.engineering/why-passwords-suck-d1d1f38c1bb4)
 * 2016-05-12: [Password-less hassle-free authentication in Rails](https://masa331.github.io/2016/05/21/passwordless-authentication-in-rails.html)
 * 2016-08-12: [Securing access to genetic and personal information without a password](https://biogeniq.ca/en/articles/securing-access-to-genetic-and-personal-information-without-a-password/)
@@ -170,12 +171,13 @@ ends. See also: [xkcd: Password Reuse](https://xkcd.com/792/)
 ### Limitations:
 
 * A compromised email account will compromise the user account. **However, this
-is also true of any traditional password system that allows for email reset or
-recovery of passwords.** The only way to circumvent this attack vector is to
-handle password resets in a way that verifies a person's identity manually and
-likely in person and with identification. Since most websites are probably not
-willing to take that step (though financial institutions should be at the very
-least considering it) then emailed one-time passwords are just as secure as
+is also true of any traditional password system that allows for automated
+password reset or recovery via email.**
+The only way to circumvent this attack vector is to
+handle password resets in a way that verifies a person's identity manually,
+in person, and with identification. Since most websites are probably not
+willing to take that step (though financial institutions should at the very
+least consider it) then emailed one-time passwords are just as secure as
 any website employing an automated email password reset system.
 * Users must divulge an email account under their control to sign in. This does
 not seem like a huge hurdle. If people are concerned with their privacy they
