@@ -59,7 +59,7 @@ end
 `config/routes.rb` file something like this:
 
 ```ruby
-post '/auth/:provider/callback', to: 'sessions#create'
+match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
 ```
 
 `app/controllers/sessions_controller.rb` file something like this:

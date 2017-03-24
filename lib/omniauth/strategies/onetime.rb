@@ -142,7 +142,9 @@ module OmniAuth
       def send_password(email, plaintext)
         # break the password into groups of 4 letters for readability and
         # usability
-        body = plaintext.scan(/.{4}/).join(' ')
+        pw = plaintext.scan(/.{4}/).join(' ')
+        link = "#{callback_url}?email=#{email}&password=#{plaintext}"
+        body = "Enter this code: #{pw}\nOr click this link:\n#{link}"
         ActionMailer::Base
           .mail(options[:email_options].merge(to: email, body: body))
           .deliver_now
