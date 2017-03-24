@@ -200,7 +200,8 @@ system using this gem. Using the default settings of an 8 letter password:
 26^8 = 208,827,064,576 permutations
 
 In order to compromise a password in 5 minutes an adversary will have to
-hash nearly 700 million passwords per second.
+hash nearly 700 million passwords per second to ensure the password is cracked
+within the time the password is valid.
 
 26^8 permutations / 300 seconds = 696,090,216 hashes per second
 
@@ -216,6 +217,14 @@ cost of 12 using a GPU was able to achieve
 A Zynq 7045 FPGA device was able to achieve
 [226 hashes per second](http://www.openwall.com/presentations/Passwords14-Energy-Efficient-Cracking/slide-50.html "Energy-efficient bcrypt cracking, slide 50")
 at bcrypt cost 12.
+
+The above scenario also assumes that the attack is either not through the web
+app itself (ie there has already been a security breach) or that the web app is
+not a limiting factor on the number of attempts. If a web app also employed a
+solution like  [Rack::Attack](https://github.com/kickstarter/rack-attack) to
+limit sign-in attempts to 1 per second per ip then the chance
+of cracking a random 8 letter password is 300 (approximate attempts) in 26^8
+(permutations) or 1 in 696,090,216.
 
 It's probably wise to keep this in mind:
 
