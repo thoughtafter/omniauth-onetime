@@ -129,7 +129,7 @@ module OmniAuth
       end
 
       uid do
-        request.env['omniauth.params']['email']
+        request['email']
       end
 
       info do
@@ -148,6 +148,9 @@ module OmniAuth
           .deliver_now
       end
 
+      # if a password does not exist for the email, generate one, save it
+      # to the cache, then email it to the email address provided
+      # ie generate, save, send
       def prepare_password(email)
         # to prevent DOS do not send another password until previous one has
         # expired
@@ -161,7 +164,7 @@ module OmniAuth
       def request_email
         log :debug, 'STEP 1: Ask user for email'
 
-        form = OmniAuth::Form.new(title: 'User Info')
+        form = OmniAuth::Form.new(title: 'User Info', url: request_path)
         form.text_field :email, :email
         form.button 'Request Password'
         form.to_response
@@ -171,21 +174,11 @@ module OmniAuth
         log :debug, 'STEP 2: prepare password then ask user for password'
         prepare_password(email)
 
-        form = OmniAuth::Form.new(title: 'User Info')
+        form = OmniAuth::Form.new(title: 'User Info', url: callback_path)
         form.text_field :password, :password
         form.html("<input type=\"hidden\" name=\"email\" value=\"#{email}\">")
         form.button 'Sign In'
         form.to_response
-      end
-
-      def request_verification(email, plaintext)
-        log :debug, 'STEP 3: verify password'
-        if verify_password(email, plaintext)
-          options[:password_cache].delete(email) # expire password
-          redirect callback_path
-        else
-          redirect request_path
-        end
       end
 
       def request_phase
@@ -197,9 +190,24 @@ module OmniAuth
         elsif plaintext.blank?
           request_password(email)
         else
-          request_verification(email, plaintext)
+          fail!(:took_a_wrong_turn)
         end
       end
+
+      def callback_phase
+        log :debug, 'STEP 3: verify password'
+        email = request.params['email']
+        plaintext = request.params['password']
+
+        if verify_password(email, plaintext)
+          # expire password
+          options[:password_cache].delete(email)
+          super
+        else
+          fail!(:invalid_credentials)
+        end
+      end
+
     end
   end
 end
