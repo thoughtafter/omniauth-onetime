@@ -3,6 +3,7 @@
 [![Code Climate](https://codeclimate.com/github/thoughtafter/omniauth-onetime/badges/gpa.svg)](https://codeclimate.com/github/thoughtafter/omniauth-onetime)
 [![Test Coverage](https://codeclimate.com/github/thoughtafter/omniauth-onetime/badges/coverage.svg)](https://codeclimate.com/github/thoughtafter/omniauth-onetime/coverage)
 [![Issue Count](https://codeclimate.com/github/thoughtafter/omniauth-onetime/badges/issue_count.svg)](https://codeclimate.com/github/thoughtafter/omniauth-onetime)
+[![Known Vulnerabilities](https://snyk.io/test/github/thoughtafter/omniauth-onetime/badge.svg)](https://snyk.io/test/github/thoughtafter/omniauth-onetime)
 
 An [OmniAuth](https://github.com/omniauth/omniauth) strategy using secure
 onetime passwords.
