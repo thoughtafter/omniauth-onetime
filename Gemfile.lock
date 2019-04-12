@@ -15,7 +15,7 @@ GEM
       hashie (>= 3.4.6, < 3.7.0)
       rack (>= 1.6.2, < 3)
     rack (2.0.7)
-    rake (10.5.0)
+    rake (12.3.2)
 
 PLATFORMS
   ruby
@@ -24,7 +24,7 @@ DEPENDENCIES
   bundler (~> 1.12)
   minitest (~> 5.0)
   omniauth-onetime!
-  rake (~> 10.0)
+  rake (> 10.0)
 
 BUNDLED WITH
    1.16.4
