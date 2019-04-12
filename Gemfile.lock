@@ -24,7 +24,7 @@ DEPENDENCIES
   bundler (~> 1.12)
   minitest (~> 5.0)
   omniauth-onetime!
-  rake (> 10.0)
+  rake (>= 10.0)
 
 BUNDLED WITH
    1.16.4
