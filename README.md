@@ -122,11 +122,15 @@ Reading List:
 * 2012-07-29: [More on password-less login](http://notes.xoxco.com/post/28288684632/more-on-password-less-login)
 * 2014-04-12: [Passwords are Obsolete](https://medium.com/@ninjudd/passwords-are-obsolete-9ed56d483eb)
 * 2014-10-15: [Passwordless authentication: Secure, simple, and fast to deploy](https://hacks.mozilla.org/2014/10/passwordless-authentication-secure-simple-and-fast-to-deploy/)
+* 2014-12-15: [Would You Implement Passwordless Login?](https://www.sitepoint.com/implement-passwordless-login/)
 * 2015-06-29: [Signing in to Medium by email](https://blog.medium.com/signing-in-to-medium-by-email-aacc21134fcd)
 * 2015-06-30: [Why passwords suck](https://medium.engineering/why-passwords-suck-d1d1f38c1bb4)
+* 2015-09-30: [Log in without Passwords: Introducing Auth0 Passwordless](https://auth0.com/blog/auth0-passwordless-email-authentication-and-sms-login-without-passwords/)
 * 2016-05-12: [Password-less hassle-free authentication in Rails](https://masa331.github.io/2016/05/21/passwordless-authentication-in-rails.html)
 * 2016-08-12: [Securing access to genetic and personal information without a password](https://biogeniq.ca/en/articles/securing-access-to-genetic-and-personal-information-without-a-password/)
 * 2016-10-20: [Password-Less Authentication in Rails](https://www.sitepoint.com/password-less-authentication-in-rails/)
+* 2017-04-29: [Forget password](http://sriku.org/blog/2017/04/29/forget-password/)
+* 2018-04-17: [Is Passwordless Authentication Actually Secure?](https://www.okta.com/security-blog/2018/04/is-passwordless-authentication-actually-secure/)
 * [Passwordless](https://passwordless.net/)
 
 The nomenclature has been settling on calling this approach "passwordless".
