@@ -3,12 +3,12 @@ PATH
   specs:
     omniauth-onetime (1.0.5)
       bcrypt (~> 3.1)
-      omniauth (~> 1.0)
+      omniauth (~> 1.9)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    bcrypt (3.1.12)
+    bcrypt (3.1.13)
     hashie (3.6.0)
     minitest (5.11.3)
     omniauth (1.9.0)
@@ -27,4 +27,4 @@ DEPENDENCIES
   rake (>= 10.0)
 
 BUNDLED WITH
-   1.16.4
+   1.17.3
