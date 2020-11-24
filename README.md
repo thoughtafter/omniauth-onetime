@@ -106,6 +106,8 @@ These settings can be passed as a hash in the initializer.
   (default: 300)
 * password_cost - bcrypt cost/rounds (default: 12), be sure you understand the
   implications of changing this
+    * (2012) [Bcrypt: Choosing a Work Factor](https://wildlyinaccurate.com/bcrypt-choosing-a-work-factor/)
+    * (2019) [Password Hashing Work Factor Recommendations in 2019](https://cptwin.netlify.app/post/2019-03-02-password-hashing-work-factor-recommendations-in-2019/)
 * email_options - a hash to be sent to ActionMailer::Base.mail (default:
   { subject: 'Sign In Details' })
 * password_cache - a cache to store the passwords (default: Rails.cache for
