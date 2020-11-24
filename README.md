@@ -221,6 +221,9 @@ cost of 12 using a GPU was able to achieve
 A Zynq 7045 FPGA device was able to achieve
 [226 hashes per second](http://www.openwall.com/presentations/Passwords14-Energy-Efficient-Cracking/slide-50.html "Energy-efficient bcrypt cracking, slide 50")
 at bcrypt cost 12.
+In 2020, claims were made that 18 ZTEX 1.15y boards could achieve [2.1M hashes
+per second at cost 5](https://scatteredsecrets.medium.com/bcrypt-password-cracking-extremely-slow-not-if-you-are-using-hundreds-of-fpgas-7ae42e3272f6).
+That would be about 16.5K hashes per second at cost 12.
 
 The above scenario also assumes that the attack is either not through the web
 app itself (ie there has already been a security breach) or that the web app is
