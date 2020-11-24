@@ -131,7 +131,6 @@ Reading List:
 * 2016-10-20: [Password-Less Authentication in Rails](https://www.sitepoint.com/password-less-authentication-in-rails/)
 * 2017-04-29: [Forget password](http://sriku.org/blog/2017/04/29/forget-password/)
 * 2018-04-17: [Is Passwordless Authentication Actually Secure?](https://www.okta.com/security-blog/2018/04/is-passwordless-authentication-actually-secure/)
-* [Passwordless](https://passwordless.net/)
 
 The nomenclature has been settling on calling this approach "passwordless".
 That makes sense if the email sent the user contains a link such that the user
