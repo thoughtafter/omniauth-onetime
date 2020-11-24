@@ -127,12 +127,13 @@ Reading List:
 * 2014-12-15: [Would You Implement Passwordless Login?](https://www.sitepoint.com/implement-passwordless-login/)
 * 2015-06-29: [Signing in to Medium by email](https://blog.medium.com/signing-in-to-medium-by-email-aacc21134fcd)
 * 2015-06-30: [Why passwords suck](https://medium.engineering/why-passwords-suck-d1d1f38c1bb4)
+* 2015-07-02: [It is (Past) Time for Passwordless Login](https://blog.howdy.ai/it-is-past-time-for-passwordless-login-4f468b812301)
 * 2015-09-30: [Log in without Passwords: Introducing Auth0 Passwordless](https://auth0.com/blog/auth0-passwordless-email-authentication-and-sms-login-without-passwords/)
 * 2016-05-12: [Password-less hassle-free authentication in Rails](https://masa331.github.io/2016/05/21/passwordless-authentication-in-rails.html)
-* 2016-08-12: [Securing access to genetic and personal information without a password](https://biogeniq.ca/en/articles/securing-access-to-genetic-and-personal-information-without-a-password/)
+* 2016-08-16: [The passwordless approach : Securing access to genetic data](https://medium.com/@ocltech/the-passwordless-approach-securing-access-to-genetic-data-5099c1fae3c)
 * 2016-10-20: [Password-Less Authentication in Rails](https://www.sitepoint.com/password-less-authentication-in-rails/)
 * 2017-04-29: [Forget password](http://sriku.org/blog/2017/04/29/forget-password/)
-* 2018-04-17: [Is Passwordless Authentication Actually Secure?](https://www.okta.com/security-blog/2018/04/is-passwordless-authentication-actually-secure/)
+* 2018-04-17: [Is Passwordless Authentication Actually Secure?](https://www.okta.com/blog/2018/04/is-passwordless-authentication-actually-secure/)
 
 The nomenclature has been settling on calling this approach "passwordless".
 That makes sense if the email sent the user contains a link such that the user
