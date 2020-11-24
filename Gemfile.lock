@@ -1,21 +1,20 @@
 PATH
   remote: .
   specs:
-    omniauth-onetime (1.0.5)
+    omniauth-onetime (1.0.6)
       bcrypt (~> 3.1)
       omniauth (~> 1.9)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    bcrypt (3.1.13)
-    hashie (3.6.0)
-    minitest (5.11.3)
-    omniauth (1.9.0)
-      hashie (>= 3.4.6, < 3.7.0)
+    bcrypt (3.1.16)
+    hashie (4.1.0)
+    minitest (5.14.2)
+    omniauth (1.9.1)
+      hashie (>= 3.4.6)
       rack (>= 1.6.2, < 3)
-    rack (2.0.7)
-    rake (12.3.2)
+    rack (2.2.3)
 
 PLATFORMS
   ruby
@@ -24,7 +23,6 @@ DEPENDENCIES
   bundler (~> 1.12)
   minitest (~> 5.0)
   omniauth-onetime!
-  rake (>= 10.0)
 
 BUNDLED WITH
    1.17.3
