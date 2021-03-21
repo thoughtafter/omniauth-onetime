@@ -38,8 +38,8 @@ module OmniAuth
       # cost = bcrypt cost
       # speed = hashes per second per device at cost
       # devices = number of devices
-      AdversarySingleDevice = { cost: 12, speed: 300, devices: 1 }
-      AdversaryMultiDevice = { cost: 12, speed: 300, devices: 128 }
+      AdversarySingleDevice = { cost: 12, speed: 300, devices: 1 }.freeze
+      AdversaryMultiDevice = { cost: 12, speed: 300, devices: 128 }.freeze
       option :adversary, AdversaryMultiDevice
 
       # 1 = 100 percent chance of the adversary cracking within the time

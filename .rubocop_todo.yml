@@ -62,11 +62,3 @@ Style/GuardClause:
 Style/IfUnlessModifier:
   Exclude:
     - 'lib/omniauth/strategies/onetime.rb'
-
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: literals, strict
-Style/MutableConstant:
-  Exclude:
-    - 'lib/omniauth/strategies/onetime.rb'
