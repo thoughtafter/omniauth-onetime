@@ -1,10 +1,10 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'omniauth/onetime/version'
+require 'omniauth/omniauth-onetime/version.rb'
 
 Gem::Specification.new do |spec|
   spec.name          = 'omniauth-onetime'
-  spec.version       = Omniauth::Onetime::VERSION
+  spec.version       = OmniAuth::Onetime::VERSION
   spec.authors       = ['thoughtafter']
   spec.email         = ['thoughtafter@gmail.com']
 
