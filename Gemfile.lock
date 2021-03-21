@@ -11,7 +11,7 @@ GEM
     ast (2.4.2)
     bcrypt (3.1.16)
     hashie (4.1.0)
-    minitest (5.14.2)
+    minitest (5.14.4)
     omniauth (1.9.1)
       hashie (>= 3.4.6)
       rack (>= 1.6.2, < 3)
@@ -40,10 +40,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.12)
+  bundler (~> 2.2)
   minitest (~> 5.0)
   omniauth-onetime!
   rubocop (~> 1.11)
 
 BUNDLED WITH
-   1.17.3
+   2.2.14
