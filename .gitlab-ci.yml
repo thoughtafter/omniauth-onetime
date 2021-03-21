@@ -7,6 +7,7 @@ cache:
 
 before_script:
   - ruby -v  # Print out ruby version for debugging
+  - gem install bundler -v "$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1)"
   - bundle install -j $(nproc) --path vendor  # Install dependencies into ./vendor/ruby
 
 rubocop:
