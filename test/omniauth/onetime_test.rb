@@ -8,13 +8,13 @@ module OmniAuth
     end
 
     def test_default_difficulty
-      assert_equal 696090215, OmniAuth::Strategies::Onetime.difficulty
+      assert_equal 696_090_215, OmniAuth::Strategies::Onetime.difficulty
     end
 
     def test_default_adversary
       assert_equal 1, OmniAuth::Strategies::Onetime.adversary_adjust
-      assert_equal 38400, OmniAuth::Strategies::Onetime.adversary_speed
-      assert_equal 18127, OmniAuth::Strategies::Onetime.adversary_ratio.to_i
+      assert_equal 38_400, OmniAuth::Strategies::Onetime.adversary_speed
+      assert_equal 18_127, OmniAuth::Strategies::Onetime.adversary_ratio.to_i
       assert_equal 0.006,
         OmniAuth::Strategies::Onetime.adversary_chance.to_f.round(3)
     end
