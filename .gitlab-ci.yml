@@ -13,3 +13,7 @@ rubocop:
   script:
     - bundle exec rubocop -v
     - bundle exec rubocop
+
+test:
+  script:
+    - bundle exec rake test
