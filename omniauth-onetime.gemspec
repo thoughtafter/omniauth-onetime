@@ -1,4 +1,6 @@
 # coding: utf-8
+# frozen_string_literal: true
+
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'omniauth/omniauth-onetime/version'
@@ -22,10 +24,10 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'bundler', '~> 2.2'
   spec.add_development_dependency 'minitest', '~> 5.0'
+  spec.add_development_dependency 'rake'
   spec.add_development_dependency 'rubocop', '~> 1.11'
   spec.add_development_dependency 'rubocop-performance', '~> 1.10'
-  spec.add_development_dependency 'rake'
 
-  spec.add_runtime_dependency 'omniauth', '~> 1.9'
   spec.add_runtime_dependency 'bcrypt', '~> 3.1'
+  spec.add_runtime_dependency 'omniauth', '~> 1.9'
 end

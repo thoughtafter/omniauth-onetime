@@ -7,14 +7,6 @@
 # versions of RuboCop, may require this file to be generated again.
 
 # Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: TreatCommentsAsGroupSeparators, ConsiderPunctuation, Include.
-# Include: **/*.gemspec
-Gemspec/OrderedDependencies:
-  Exclude:
-    - 'omniauth-onetime.gemspec'
-
-# Offense count: 1
 # Configuration parameters: Include.
 # Include: **/*.gemspec
 Gemspec/RequiredRubyVersion:
@@ -27,21 +19,6 @@ Gemspec/RequiredRubyVersion:
 # SupportedStyles: with_first_argument, with_fixed_indentation
 Layout/ArgumentAlignment:
   Exclude:
-    - 'test/omniauth/onetime_test.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Layout/EmptyLineAfterMagicComment:
-  Exclude:
-    - 'omniauth-onetime.gemspec'
-
-# Offense count: 3
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: empty_lines, empty_lines_except_namespace, empty_lines_special, no_empty_lines, beginning_only, ending_only
-Layout/EmptyLinesAroundClassBody:
-  Exclude:
-    - 'lib/omniauth/strategies/onetime.rb'
     - 'test/omniauth/onetime_test.rb'
 
 # Offense count: 1
@@ -72,22 +49,6 @@ Style/Encoding:
 Style/ExpandPathArguments:
   Exclude:
     - 'omniauth-onetime.gemspec'
-    - 'test/test_helper.rb'
-
-# Offense count: 9
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: always, always_true, never
-Style/FrozenStringLiteralComment:
-  Exclude:
-    - 'Gemfile'
-    - 'Rakefile'
-    - 'bin/console'
-    - 'lib/omniauth-onetime.rb'
-    - 'lib/omniauth/omniauth-onetime/version.rb'
-    - 'lib/omniauth/strategies/onetime.rb'
-    - 'omniauth-onetime.gemspec'
-    - 'test/omniauth/onetime_test.rb'
     - 'test/test_helper.rb'
 
 # Offense count: 2

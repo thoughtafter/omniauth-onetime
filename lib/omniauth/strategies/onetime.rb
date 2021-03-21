@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #
 # omniauth-onetime - An omniauth strategy using secure onetime passwords.
 # Copyright (C) 2016 thoughtafter@gmail.com
@@ -209,7 +211,6 @@ module OmniAuth
           fail!(:invalid_credentials)
         end
       end
-
     end
   end
 end

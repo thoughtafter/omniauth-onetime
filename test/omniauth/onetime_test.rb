@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 module OmniAuth
   class OnetimeTest < Minitest::Test
-
     def test_that_it_has_a_version_number
       refute_nil ::OmniAuth::Onetime::VERSION
     end
@@ -24,6 +25,5 @@ module OmniAuth
         OmniAuth::Strategies::Onetime.new(nil)
       end
     end
-
   end
 end

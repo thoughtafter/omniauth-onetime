@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #
 # omniauth-onetime - An omniauth strategy using secure onetime passwords.
 # Copyright (C) 2016 thoughtafter@gmail.com
@@ -19,6 +21,6 @@
 #
 module OmniAuth
   module Onetime
-    VERSION = '1.0.7'.freeze
+    VERSION = '1.0.7'
   end
 end
