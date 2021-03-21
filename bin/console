@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'bundler/setup'
-require 'omniauth-onetime'
+require 'omniauth/onetime'
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
@@ -11,4 +11,4 @@ require 'omniauth-onetime'
 # Pry.start
 
 require 'irb'
-IRB.start
+IRB.start(__FILE__)
