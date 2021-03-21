@@ -3,7 +3,7 @@ PATH
   specs:
     omniauth-onetime (1.0.7)
       bcrypt (~> 3.1)
-      omniauth (~> 1.9)
+      omniauth (~> 2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -12,13 +12,16 @@ GEM
     bcrypt (3.1.16)
     hashie (4.1.0)
     minitest (5.14.4)
-    omniauth (1.9.1)
+    omniauth (2.0.3)
       hashie (>= 3.4.6)
       rack (>= 1.6.2, < 3)
+      rack-protection
     parallel (1.20.1)
     parser (3.0.0.0)
       ast (~> 2.4.1)
     rack (2.2.3)
+    rack-protection (2.1.0)
+      rack
     rainbow (3.0.0)
     rake (13.0.3)
     regexp_parser (2.1.1)

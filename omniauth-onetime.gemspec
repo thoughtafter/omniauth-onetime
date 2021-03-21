@@ -29,5 +29,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rubocop-performance', '~> 1.10'
 
   spec.add_runtime_dependency 'bcrypt', '~> 3.1'
-  spec.add_runtime_dependency 'omniauth', '~> 1.9'
+  spec.add_runtime_dependency 'omniauth', '~> 2.0'
 end
