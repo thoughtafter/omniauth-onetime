@@ -93,9 +93,9 @@ module OmniAuth
 
       class_eval do
         if (s = adversary_ratio) < (m = default_options[:minimum_security])
-          raise ArgumentError, 'Omniauth-Onetime options do not reach minimum' \
-          " security requirements (#{s.to_i}<#{m}), please increase" \
-          ' password_length, increase password_cost, or decrease password_time.'
+          raise ArgumentError,
+                "Omniauth-Onetime options do not reach minimum security requirements (#{s.to_i}<#{m}), please" \
+                ' increase password_length, increase password_cost, or decrease password_time.'
         end
       end
 
