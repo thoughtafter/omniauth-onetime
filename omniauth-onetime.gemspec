@@ -30,7 +30,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rubocop-minitest'
   spec.add_development_dependency 'rubocop-performance'
   spec.add_development_dependency 'rubocop-rake'
-  spec.add_development_dependency 'simplecov-cobertura', '~> 1.4'
+  spec.add_development_dependency 'simplecov-cobertura', '~> 2.1'
 
   spec.add_runtime_dependency 'bcrypt', '~> 3.1'
   spec.add_runtime_dependency 'omniauth', '~> 2.0'
