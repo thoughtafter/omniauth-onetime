@@ -14,11 +14,6 @@ Layout/ArgumentAlignment:
   Exclude:
     - 'test/omniauth/onetime_test.rb'
 
-# Offense count: 1
-# Configuration parameters: CountComments, CountAsOne.
-Metrics/ClassLength:
-  Max: 126
-
 # Offense count: 2
 Naming/ConstantName:
   Exclude:
