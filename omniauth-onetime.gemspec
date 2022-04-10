@@ -34,4 +34,5 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'bcrypt', '~> 3.1'
   spec.add_runtime_dependency 'omniauth', '~> 2.0'
+  spec.metadata['rubygems_mfa_required'] = 'true'
 end
