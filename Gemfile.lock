@@ -9,7 +9,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
-    bcrypt (3.1.17)
+    bcrypt (3.1.18)
     docile (1.4.0)
     hashie (5.0.0)
     minitest (5.15.0)
