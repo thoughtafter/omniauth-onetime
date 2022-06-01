@@ -2,8 +2,8 @@ PATH
   remote: .
   specs:
     omniauth-onetime (1.0.8)
-      bcrypt (~> 3.1)
-      omniauth (~> 2.0)
+      bcrypt (>= 3.1)
+      omniauth (>= 2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -38,13 +38,9 @@ GEM
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.18.0)
       parser (>= 3.1.1.0)
-    rubocop-minitest (0.20.0)
-      rubocop (>= 0.90, < 2.0)
     rubocop-performance (1.14.0)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
-    rubocop-rake (0.6.0)
-      rubocop (~> 1.0)
     ruby-progressbar (1.11.0)
     simplecov (0.21.2)
       docile (~> 1.1)
@@ -61,15 +57,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 2.2)
-  minitest (~> 5.0)
+  bundler (>= 2.2)
+  minitest (>= 5.0)
   omniauth-onetime!
-  rake
-  rubocop (~> 1.20)
-  rubocop-minitest
-  rubocop-performance
-  rubocop-rake
-  simplecov-cobertura (~> 2.1)
+  rake (>= 12.0)
+  rubocop (>= 1.20)
+  rubocop-performance (>= 1.14)
+  simplecov-cobertura (>= 2.1)
 
 BUNDLED WITH
    2.3.11
