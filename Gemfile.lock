@@ -12,7 +12,7 @@ GEM
     bcrypt (3.1.18)
     docile (1.4.0)
     hashie (5.0.0)
-    minitest (5.15.0)
+    minitest (5.16.0)
     omniauth (2.1.0)
       hashie (>= 3.4.6)
       rack (>= 2.2.3)
