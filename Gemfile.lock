@@ -13,15 +13,15 @@ GEM
     docile (1.4.0)
     hashie (5.0.0)
     minitest (5.15.0)
-    omniauth (2.1.0)
+    omniauth (2.1.1)
       hashie (>= 3.4.6)
       rack (>= 2.2.3)
       rack-protection
     parallel (1.22.1)
     parser (3.1.2.0)
       ast (~> 2.4.1)
-    rack (2.2.3.1)
-    rack-protection (2.2.0)
+    rack (3.0.4.1)
+    rack-protection (3.0.5)
       rack
     rainbow (3.1.1)
     rake (13.0.6)
